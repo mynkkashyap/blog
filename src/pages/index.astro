@@ -12,27 +12,27 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+
+  
+
 const metadata = {
-  title: 'Mayank Kashyap — Final Year MBBS Student | Medical Portfolio',
-  description:
-    'Portfolio of Mayank Kashyap, Final Year MBBS student. Medical education, blogs, clinical interests, and healthcare projects.',
+  title: 'Mayank Kashyap — Final Year MBBS Student',
+  description: 'Mayank Kashyap, Final Year MBBS student. Medical blogging and healthcare education.',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HERO SECTION -->
   <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'View Instagram',
+        text: 'Instagram',
         href: 'https://instagram.com/mayankk0205',
         target: '_blank',
-        icon: 'tabler:brand-instagram',
       },
       {
-        text: 'Read Medical Blogs',
+        text: 'Blog',
         href: '/blog',
       },
     ]}
@@ -42,123 +42,12 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Hi, I’m <span class="text-accent dark:text-white">Mayank Kashyap</span><br />
-      <span class="hidden sm:inline">Final Year MBBS Student</span>
+      Mayank <span class="text-accent">Kashyap</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Aspiring doctor with a passion for <strong>clinical medicine</strong>,
-      <strong>medical education</strong>, and <strong>digital healthcare</strong>.
-      <br class="hidden md:inline" />
-      Sharing evidence-based medical knowledge through blogs and projects.
+      Final Year MBBS Student <br />
+      Medical Blogging & Healthcare Education
     </Fragment>
   </Hero>
-
-  <!-- NOTE / DISCLAIMER -->
-  <Note>
-    All medical content shared here is strictly for <strong>educational purposes</strong>.
-    Always consult a registered medical practitioner for diagnosis or treatment.
-  </Note>
-
-  <!-- FEATURES -->
-  <Features
-    id="features"
-    title="What I Do"
-    subtitle="Combining medicine, technology, and education"
-    items={[
-      {
-        title: 'Medical Blogging',
-        description:
-          'Writing simplified, evidence-based medical content for students and the general public.',
-        icon: 'tabler:book',
-      },
-      {
-        title: 'Clinical Learning',
-        description:
-          'Hands-on clinical exposure across medicine, surgery, pediatrics, and emergency care.',
-        icon: 'tabler:stethoscope',
-      },
-      {
-        title: 'Healthcare Projects',
-        description:
-          'Building digital health platforms like HealthBlog to spread credible medical information.',
-        icon: 'tabler:heart-rate-monitor',
-      },
-    ]}
-  />
-
-  <!-- SKILLS / INTERESTS -->
-  <Features2
-    title="Areas of Interest"
-    subtitle="My academic and professional focus"
-    items={[
-      'Internal Medicine',
-      'Emergency Medicine',
-      'Medical Education & Teaching',
-      'Preventive Healthcare',
-      'Health Tech & Blogging',
-    ]}
-  />
-
-  <!-- STATS -->
-  <Stats
-    items={[
-      { title: 'MBBS Year', value: 'Final Year' },
-      { title: 'Medical Blogs Written', value: '100+' },
-      { title: 'Clinical Rotations', value: 'Multiple Departments' },
-      { title: 'Healthcare Projects', value: '5+' },
-    ]}
-  />
-
-  <!-- CONTENT SECTION -->
-  <Content
-    title="About Me"
-    subtitle="A future doctor driven by learning and impact"
-  >
-    <p>
-      I am a final-year MBBS student with a strong interest in clinical medicine,
-      medical teaching, and digital healthcare innovation. Through platforms like
-      <strong>HealthBlog</strong>, I aim to make reliable medical knowledge accessible,
-      understandable, and ethical.
-    </p>
-  </Content>
-
-  <!-- BLOG POSTS -->
-  <BlogLatestPosts
-    title="Latest Medical Articles"
-    subtitle="Recently published on HealthBlog"
-  />
-
-  <!-- FAQs -->
-  <FAQs
-    title="Frequently Asked Questions"
-    items={[
-      {
-        question: 'Are you a licensed doctor?',
-        answer:
-          'I am currently a final-year MBBS student. Content is shared for educational purposes only.',
-      },
-      {
-        question: 'Can I consult you online?',
-        answer:
-          'No personal consultations are provided. Please consult a registered medical practitioner.',
-      },
-      {
-        question: 'Can I collaborate on medical projects?',
-        answer:
-          'Yes, feel free to reach out via social media or email for collaborations.',
-      },
-    ]}
-  />
-
-  <!-- CALL TO ACTION -->
-  <CallToAction>
-    <Fragment slot="title">
-      Let’s Learn & Grow in <span class="text-accent">Medicine</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Follow my journey as a medical student and healthcare content creator.
-    </Fragment>
-  </CallToAction>
-</Layout>
+</Layout>     
