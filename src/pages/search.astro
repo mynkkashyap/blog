@@ -22,14 +22,25 @@ import Layout from '~/layouts/PageLayout.astro';
 
   <!-- Pagefind runtime -->
   <script src="/pagefind/pagefind-ui.js" is:inline></script>
-  <script is:inline>
-    window.addEventListener("DOMContentLoaded", () => {
-      new PagefindUI({
-        element: "#search",
-        resetStyles: false,
-        showImages: true,
-        placeholder: "Search health articles…",
-      });
+<script is:inline>
+  function initPagefind() {
+    const el = document.querySelector("#search");
+    if (!el || el.dataset.pagefindInitialized) return;
+
+    el.dataset.pagefindInitialized = "true";
+
+    new PagefindUI({
+      element: "#search",
+      resetStyles: false,
+      showImages: true,
+      placeholder: "Search health articles…",
     });
-  </script>
+  }
+
+  // Initial page load
+  document.addEventListener("DOMContentLoaded", initPagefind);
+
+  // Astro client-side navigation (THIS is the missing piece)
+  document.addEventListener("astro:page-load", initPagefind);
+</script>
 </Layout>
