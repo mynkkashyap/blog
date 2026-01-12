@@ -20,9 +20,9 @@ import Layout from '~/layouts/PageLayout.astro';
     </section>
   </main>
 
-  <!-- Pagefind logic -->
-  <script src="/pagefind/pagefind-ui.js"></script>
-  <script>
+  <!-- Pagefind runtime -->
+  <script src="/pagefind/pagefind-ui.js" is:inline></script>
+  <script is:inline>
     window.addEventListener("DOMContentLoaded", () => {
       new PagefindUI({
         element: "#search",
@@ -32,29 +32,4 @@ import Layout from '~/layouts/PageLayout.astro';
       });
     });
   </script>
-
-  <!-- Optional modern tweaks -->
-  <style>
-    /* Smooth results */
-    .pagefind-ui__results {
-      margin-top: 1rem;
-    }
-
-    /* Rounded inputs */
-    .pagefind-ui__search-input {
-      border-radius: 0.75rem;
-      padding: 0.75rem 1rem;
-      font-size: 1rem;
-    }
-
-    /* Result cards */
-    .pagefind-ui__result {
-      padding: 0.75rem 0;
-      border-bottom: 1px solid rgba(0,0,0,.06);
-    }
-
-    .dark .pagefind-ui__result {
-      border-color: rgba(255,255,255,.08);
-    }
-  </style>
 </Layout>
