@@ -1,0 +1,103 @@
+---
+import { Icon } from "astro-icon/components";
+import Button from "~/components/ui/Button.astro";
+import { getPermalink } from "~/utils/permalinks";
+
+export interface Props {
+  prevUrl?: string;
+  nextUrl?: string;
+  currentPage: number;
+  lastPage: number;
+}
+
+const {
+  prevUrl,
+  nextUrl,
+  currentPage = 1,
+  lastPage = 1,
+} = Astro.props;
+
+// Utility: Generate smart pagination with dots
+function getPageNumbers(current: number, total: number) {
+  const delta = 2;
+  const pages = [];
+
+  for (let i = 1; i <= total; i++) {
+    if (
+      i === 1 ||
+      i === total ||
+      (i >= current - delta && i <= current + delta)
+    ) {
+      pages.push(i);
+    }
+  }
+
+  const finalPages = [];
+  let prevNum = 0;
+
+  for (const num of pages) {
+    if (num - prevNum > 1) {
+      finalPages.push("...");
+    }
+    finalPages.push(num);
+    prevNum = num;
+  }
+
+  return finalPages;
+}
+
+const pageList = getPageNumbers(currentPage, lastPage);
+
+// Correct AstroWind page routing:
+const makeUrl = (p: number) => (p === 1 ? "/blog/" : `/blog/${p}/`);
+---
+
+{(prevUrl || nextUrl) && (
+  <div class="container flex flex-col items-center mt-10 gap-6">
+
+    <!-- Top Previous/Next buttons -->
+    <div class="flex w-full max-w-lg justify-between">
+      <Button
+        variant="tertiary"
+        class={`px-3 ${!prevUrl ? "invisible" : ""}`}
+        href={prevUrl && getPermalink(prevUrl)}
+        rel="prev"
+      >
+        <Icon name="tabler:chevron-left" class="w-6 h-6" />
+        <span class="ml-2">Newer posts</span>
+      </Button>
+
+      <Button
+        variant="tertiary"
+        class={`px-3 ${!nextUrl ? "invisible" : ""}`}
+        href={nextUrl && getPermalink(nextUrl)}
+        rel="next"
+      >
+        <span class="mr-2">Older posts</span>
+        <Icon name="tabler:chevron-right" class="w-6 h-6" />
+      </Button>
+    </div>
+
+    <!-- Numbered pagination with dots -->
+    <nav class="flex gap-2 flex-wrap justify-center text-sm" aria-label="Pagination">
+
+      {pageList.map((item) => (
+        typeof item === "string" ? (
+          <span class="px-3 py-2 text-gray-400 dark:text-gray-500 select-none">…</span>
+        ) : (
+          <a
+            href={makeUrl(item)}
+            class={`px-4 py-2 rounded border transition ${
+              item === currentPage
+                ? "bg-black text-white dark:bg-white dark:text-black"
+                : "hover:bg-gray-100 dark:hover:bg-gray-800"
+            }`}
+          >
+            {item}
+          </a>
+        )
+      ))}
+
+    </nav>
+  </div>
+)}
