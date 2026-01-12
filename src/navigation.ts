@@ -7,7 +7,7 @@ export const headerData = {
       links: [
         {
           text: 'Login / Register',
-          href: 'https://auth.medr.in',
+          href: 'https://auth.medr.in/login',
         },
         {
           text: 'About Me',
