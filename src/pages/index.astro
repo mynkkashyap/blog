@@ -13,52 +13,152 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'HealthBlog — Credible source for all your health related problems.',
+  title: 'Mayank Kashyap — Final Year MBBS Student | Medical Portfolio',
+  description:
+    'Portfolio of Mayank Kashyap, Final Year MBBS student. Medical education, blogs, clinical interests, and healthcare projects.',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
+  <!-- HERO SECTION -->
   <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'Follow',
+        text: 'View Instagram',
         href: 'https://instagram.com/mayankk0205',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:brand-instagram',
       },
-      { text: 'Learn more', href: '#features' },
+      {
+        text: 'Read Medical Blogs',
+        href: '/blog',
+      },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    image={{
+      src: 'https://healthblog.in/mayank.png',
+      alt: 'Mayank Kashyap MBBS Student',
+    }}
   >
     <Fragment slot="title">
-      Welcome you all in this <span class="hidden xl:inline">amazing project.</span>
-      <span class="text-accent dark:text-white"> Health</span>Blog
-
+      Hi, I’m <span class="text-accent dark:text-white">Mayank Kashyap</span><br />
+      <span class="hidden sm:inline">Final Year MBBS Student</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">Healthblog</span> Medical Professional help just a click away!</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>
-    It is advised to seek help from registered medical practioner, Content here is for educational purpose only.
+      Aspiring doctor with a passion for <strong>clinical medicine</strong>,
+      <strong>medical education</strong>, and <strong>digital healthcare</strong>.
+      <br class="hidden md:inline" />
+      Sharing evidence-based medical knowledge through blogs and projects.
     </Fragment>
   </Hero>
 
+  <!-- NOTE / DISCLAIMER -->
+  <Note>
+    All medical content shared here is strictly for <strong>educational purposes</strong>.
+    Always consult a registered medical practitioner for diagnosis or treatment.
+  </Note>
 
+  <!-- FEATURES -->
+  <Features
+    id="features"
+    title="What I Do"
+    subtitle="Combining medicine, technology, and education"
+    items={[
+      {
+        title: 'Medical Blogging',
+        description:
+          'Writing simplified, evidence-based medical content for students and the general public.',
+        icon: 'tabler:book',
+      },
+      {
+        title: 'Clinical Learning',
+        description:
+          'Hands-on clinical exposure across medicine, surgery, pediatrics, and emergency care.',
+        icon: 'tabler:stethoscope',
+      },
+      {
+        title: 'Healthcare Projects',
+        description:
+          'Building digital health platforms like HealthBlog to spread credible medical information.',
+        icon: 'tabler:heart-rate-monitor',
+      },
+    ]}
+  />
 
-  
+  <!-- SKILLS / INTERESTS -->
+  <Features2
+    title="Areas of Interest"
+    subtitle="My academic and professional focus"
+    items={[
+      'Internal Medicine',
+      'Emergency Medicine',
+      'Medical Education & Teaching',
+      'Preventive Healthcare',
+      'Health Tech & Blogging',
+    ]}
+  />
+
+  <!-- STATS -->
+  <Stats
+    items={[
+      { title: 'MBBS Year', value: 'Final Year' },
+      { title: 'Medical Blogs Written', value: '100+' },
+      { title: 'Clinical Rotations', value: 'Multiple Departments' },
+      { title: 'Healthcare Projects', value: '5+' },
+    ]}
+  />
+
+  <!-- CONTENT SECTION -->
+  <Content
+    title="About Me"
+    subtitle="A future doctor driven by learning and impact"
+  >
+    <p>
+      I am a final-year MBBS student with a strong interest in clinical medicine,
+      medical teaching, and digital healthcare innovation. Through platforms like
+      <strong>HealthBlog</strong>, I aim to make reliable medical knowledge accessible,
+      understandable, and ethical.
+    </p>
+  </Content>
+
+  <!-- BLOG POSTS -->
+  <BlogLatestPosts
+    title="Latest Medical Articles"
+    subtitle="Recently published on HealthBlog"
+  />
+
+  <!-- FAQs -->
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        question: 'Are you a licensed doctor?',
+        answer:
+          'I am currently a final-year MBBS student. Content is shared for educational purposes only.',
+      },
+      {
+        question: 'Can I consult you online?',
+        answer:
+          'No personal consultations are provided. Please consult a registered medical practitioner.',
+      },
+      {
+        question: 'Can I collaborate on medical projects?',
+        answer:
+          'Yes, feel free to reach out via social media or email for collaborations.',
+      },
+    ]}
+  />
+
+  <!-- CALL TO ACTION -->
+  <CallToAction>
     <Fragment slot="title">
-      Health&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Blog</span>
+      Let’s Learn & Grow in <span class="text-accent">Medicine</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Follow my journey as a medical student and healthcare content creator.
     </Fragment>
   </CallToAction>
 </Layout>
