@@ -1,5 +1,5 @@
 site:
-  name: HealthBlog
+  name: MeDr
   site: 'https://medr.in'
   base: '/'
   trailingSlash: false
