@@ -44,7 +44,7 @@ export const headerData = {
     },
   ],
   actions: [
-    { text: 'Search', href: 'https://blog-7wn.pages.dev/search' },
+    { text: 'Search', href: 'https://medr.in/search' },
   ],
 };
 export const footerData = {
