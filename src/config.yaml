@@ -1,6 +1,6 @@
 site:
   name: MeDr
-  site: 'medr.in'
+  site: 'https://medr.in'
   base: '/'
   trailingSlash: false
 
