@@ -1,6 +1,6 @@
 site:
   name: HealthBlog
-  site: 'https://healthblog.in'
+  site: 'https://medr.in'
   base: '/'
   trailingSlash: false
 
