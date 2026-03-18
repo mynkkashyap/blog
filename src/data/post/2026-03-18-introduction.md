@@ -2,7 +2,7 @@
 author: "Mayank Kashyap "
 publishDate: 2026-03-18T00:00:00+05:30
 title: "Introduction "
-image: https://medr.in/sharda.png
+image: https://medr.in/sharda1.png
 featured: false
 draft: false
 ---
