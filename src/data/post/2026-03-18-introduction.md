@@ -9,3 +9,21 @@ draft: false
 Hello 👋, this side a student of MBBS 2021 batch Sharda University.
 
 Our professional examination for final year are soon to get started.
+
+![](/sharda4.png)
+
+![](/mandela.png)
+
+![](/sharda3.png)
+
+![](/sharda2.png)
+
+![](/sharda1.png)
+
+![](/sharda5.png)
+
+![](/sharda6.png)
+
+![](/sharda7.png)
+
+![](/smsr.png)
