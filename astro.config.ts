@@ -87,7 +87,7 @@ export default defineConfig({
   ],
 
   image: {
-    domains: ['cdn.pixabay.com','medr.in'],
+    domains: ['cdn.pixabay.com','medr.in','healthblog.in'],
   },
 
   markdown: {
