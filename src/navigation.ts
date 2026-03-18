@@ -91,6 +91,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://instagram.com/healthblog.in' },
   ],
   footNote: `
-     <a class="text-blue-600 underline dark:text-muted" href="https://healthblog.in"> HealthBlog.in</a> · All rights reserved.
+     <a class="text-blue-600 underline dark:text-muted" href="https://medr.in"> MeDr.in</a> · All rights reserved.
   `,
 };
