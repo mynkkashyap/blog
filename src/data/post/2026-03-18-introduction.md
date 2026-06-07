@@ -8,7 +8,7 @@ draft: false
 ---
 Hello 👋, this side a student of MBBS 2021 batch Sharda University.
 
-Our professional examination for final year are soon to get started.
+I am currently doing my internship from sharda hospital 
 
 ![](/sharda4.png)
 
@@ -27,3 +27,4 @@ Our professional examination for final year are soon to get started.
 ![](/sharda7.png)
 
 ![](/smsr.png)
+
